@@ -40,7 +40,7 @@ const LenderDetail =({lender})=>{
                 />
             </CardSection>
             <CardSection>
-                <Button />
+                <Button onPress={()=>console.log(Name)}/>
             </CardSection>
         </Card>
         
