@@ -3,7 +3,8 @@ import {
     View,
     Text, 
     Image,
-    TouchableOpacity
+    TouchableOpacity,
+    Linking
 } from 'react-native';
 
 import Card from './card';
@@ -11,7 +12,7 @@ import CardSection from './cardsection';
 import Button from './button';
 
 const LenderDetail =({lender})=>{
-    const {Name,Address}=lender;
+    const {Name,Address,url}=lender;
     const {
         imageContainerStyle,
         imageStyle,
@@ -40,7 +41,9 @@ const LenderDetail =({lender})=>{
                 />
             </CardSection>
             <CardSection>
-                <Button onPress={()=>console.log(Name)}/>
+                <Button onPress={()=>Linking.openURL(url)}>
+                    View Now
+                </Button>
             </CardSection>
         </Card>
         
