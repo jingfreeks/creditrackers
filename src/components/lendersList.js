@@ -7,9 +7,10 @@ import {
     Linking
 } from 'react-native';
 
-import Card from './card';
-import CardSection from './cardsection';
-import Button from './button';
+//import Card from './card';
+//import CardSection from './cardsection';
+//import Button from './button';
+import {Card,CardSection,Button} from './common';
 
 const LenderDetail =({lender})=>{
     const {Name,Address,url}=lender;
