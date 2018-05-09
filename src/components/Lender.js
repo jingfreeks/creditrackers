@@ -8,7 +8,7 @@ class Lenders extends Component{
     state={lenders:[]};
     componentWillMount(){
 
-        return fetch('http://192.168.1.46:8080/validation/jsondata.json')
+        return fetch('http://192.168.1.34:8080/validation/jsondata.json')
         .then((response) => response.json())
         .then((responseJson) => {
   
