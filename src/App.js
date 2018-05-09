@@ -6,12 +6,13 @@ import React,{Component} from 'react';
 import { AppRegistry,Text,View } from 'react-native';
 import {Header} from './components/common';
 import Lenders  from './components/Lender';
+import Lenderinfo from './components/Lenderinfo';
 class App extends Component{
   render(){
     return(
       <View style={{flex:1}}>
         <Header headerText='Lenders List'/>
-        <Lenders />
+        <Lenderinfo />
       </View>
     );
   };
