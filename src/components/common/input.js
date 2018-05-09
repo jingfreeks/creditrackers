@@ -10,7 +10,7 @@ const Input = ({ label,value,onChangeText })=>{
             <TextInput 
                 value={value}
                 onChangeText={onChangeText}
-                style={{height:40,width:800 }}
+                style={{height:40,width:900 }}
             />
         </View>
     );
