@@ -8,6 +8,7 @@ class Lenderinfo extends Component{
         <Card>
             <CardSection>
                 <Input 
+                    label="Username"
                     value={this.state.text}
                     onChangeText={text =>this.setState({text})}
                    
