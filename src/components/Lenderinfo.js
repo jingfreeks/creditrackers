@@ -2,22 +2,50 @@ import React,{Component} from 'react';
 import {Button,Card,CardSection,Input } from './common';
 
 class Lenderinfo extends Component{
-    state={text:''};
+    state={username:'',password:'',confirmpassword:''};
     render(){
         return(
         <Card>
             <CardSection>
                 <Input 
-                    value={this.state.text}
-                    onChangeText={text =>this.setState({text})}
+                              
+                    placeholder="username"
+                    label="Username"
+                    value={this.state.username}
+                    onChangeText={username =>this.setState({username})}
                    
                 />
             </CardSection>
             <CardSection>
+                <Input 
+                    secureTextEntry     
+                    placeholder="password"
+                    label="Password"
+                    value={this.state.password}
+                    onChangeText={password =>this.setState({password})}
+                   
+                />
+            </CardSection>
+            <CardSection>
+                <Input 
+                        secureTextEntry     
+                        placeholder="confirmpassword"
+                        label="Confirm Password"
+                        value={this.state.confirmpassword}
+                        onChangeText={confirmpassword =>this.setState({confirmpassword})}
+                    
+                    />
+            </CardSection>
+            <CardSection>
                  <Button >
-                    View Now
+                    Register
                 </Button>
             </CardSection>
+            <CardSection>
+                 <Button >
+                    Cancel
+                </Button>
+            </CardSection>            
         </Card>
     );
     };
