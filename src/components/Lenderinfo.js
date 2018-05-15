@@ -3,6 +3,12 @@ import {Button,Card,CardSection,Input } from './common';
 
 class Lenderinfo extends Component{
     state={username:'',password:'',confirmpassword:''};
+
+    onButtonPress(){
+        const {username,password,confirmpassword}=this.state;
+        
+        console.log(this.state);
+    }
     render(){
         return(
         <Card>
@@ -37,7 +43,7 @@ class Lenderinfo extends Component{
                     />
             </CardSection>
             <CardSection>
-                 <Button >
+                 <Button onPress={this.onButtonPress.bind(this)}>
                     Register
                 </Button>
             </CardSection>
