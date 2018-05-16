@@ -8,7 +8,26 @@ class Lenderinfo extends Component{
         const {username,password,confirmpassword}=this.state;
         
         console.log(this.state);
+
+        fetch('https://reactnativecode.000webhostapp.com/user_registration.php', {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(this.state)
+           
+        }).then((response) => response.json())
+            .then((responseJson) => {
+                // Showing response message coming from server after inserting records.
+            Alert.alert(responseJson);
+                
+        }).catch((error) => {
+            console.error(error);
+        });
+
     }
+
     render(){
         return(
         <Card>
